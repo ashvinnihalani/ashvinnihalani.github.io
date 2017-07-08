@@ -44,7 +44,7 @@ function drawLines(){
 		requestAnimationFrame(drawLines);
 	}
 	else{
-		
+		document.getElementById("box").style.webkitAnimationName = "shake";
 	}
 	
 }

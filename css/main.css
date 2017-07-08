@@ -1,12 +1,13 @@
-* { margin: 0; padding: 0;}
-
-body, html { height:100%; }
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+* { margin: 0; padding: 0;}
+
+body, html { height:100%; }
+
 #myCanvas {
     position:absolute;
-	background-color: black;
 }
 
 .flexcontainer {
@@ -30,28 +31,26 @@ body, html { height:100%; }
 
 .main{
 	font-size: 60vh;
-	opacity: 0;
 }
 
 .spacer{
 	width: 10 vw;
 }
 
-.fade-in-delay {
-   opacity:0;
-  opacity: 1 \9; /*just in case ie*/
-  -webkit-animation:fadeIn ease-in 1;
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration:1.5s;
-  -moz-animation-duration:1.5s;
-  animation-duration:1.5s;
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+@-webkit-keyframes fadeIn {
+    0% {
+         opacity:0
+    }
+    25% {
+         opacity:.25;
+    }
+    50% {
+        opacity:.5;
+    }
+    75% {
+        opacity:.75
+    }
+    100% {
+        opacity:1;
+    }
 }
